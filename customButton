@@ -1,0 +1,32 @@
+//
+//  CustomButton.swift
+//  DeleteToday
+//
+//  Created by anjani on 02/05/2019.
+//  Copyright © 2019 anjani. All rights reserved.
+//
+
+import UIKit
+
+class CustomButton: UIButton {
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupButton()
+    }
+    
+    // for storyboard,,
+    required init?(coder aDecoder: NSCoder) {
+        
+        super.init(coder: aDecoder)
+        setupButton()
+    }
+    
+    func setupButton(){
+        self.backgroundColor = UIColor.blue
+        self.layer.cornerRadius = frame.height/2
+        self.clipsToBounds = true
+        self.layer.masksToBounds =  false // use for shadowing
+    }
+}
